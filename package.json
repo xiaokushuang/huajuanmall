@@ -1,0 +1,41 @@
+{
+  "name": "reacthanaroll",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.11.0",
+    "axios": "^0.18.0",
+    "http-proxy-middleware": "^0.19.1",
+    "node-sass": "^4.10.0",
+    "react": "^16.6.3",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.6.3",
+    "react-promise": "^2.0.3",
+    "react-redux": "^5.1.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "react-swipe": "^6.0.3",
+    "redux": "^4.0.1",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "swipe-js-iso": "^2.1.4",
+    "swiper": "^4.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
