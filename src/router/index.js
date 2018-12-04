@@ -33,8 +33,12 @@ import Video from '../components/Video'
 	import VideoDetail from '../components/Video/VideoDetail'
 
 import Service from '../components/Service'
+import store from "../store"
+import {Provider} from "react-redux";
 
-const router = <Router>
+const router =(
+<Provider store={store}>
+ <Router>
 	<App>
 		<Switch>
 			<Route path="/login" component={Login}/>
@@ -108,5 +112,5 @@ const router = <Router>
 		</Switch>
 	</App>
 </Router>
-
+</Provider>)
 export default router

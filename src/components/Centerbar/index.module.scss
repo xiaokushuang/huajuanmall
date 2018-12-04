@@ -1,0 +1,45 @@
+.navlist{
+	height:60px;
+	.parli{
+		float: left;
+		width: 126px;
+		height:100%;
+		text-align: center;
+		line-height: 60px;
+		position: relative;
+		cursor: pointer;
+		color: #333;
+		line-height: 60px;
+		font-size:14px;
+		img{
+			display:inline-block;
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+	}
+	.parli:hover{
+		color:#ff527d;
+	}
+	.sonul{
+		width:126px;
+		background-color: #f9f9f9;
+		.sonli{
+			height: 39px;
+			border-bottom: 1px #eee solid;
+			width:116px;
+			margin-left: 5px;
+			line-height: 39px;
+			text-align: center;
+			display: block;
+			cursor: pointer;
+			color:#333;
+			font-size: 12px; 
+		}
+	}
+	.hide{
+		display: none;
+	}
+	.sonli:hover{
+		color: #ff527d;
+	}
+}
