@@ -1,0 +1,34 @@
+:global(.xhead){
+	background: #eee;
+	height: 30px;
+	font-size: 14px;
+	:global(.iconfont){
+		line-height: 30px;
+		.shouye{
+			margin-left: 5px;
+			font-style: normal;
+		}
+	}
+	:global(.headright){
+		line-height: 30px;
+		p{
+			color: #ff527d;
+		}
+		a{
+			padding: 0px 15px;
+		}
+		a:hover{color: #ff527d;}
+		i{
+			font-style: normal;
+			color: #999;
+		}
+		:global(.iconfont){
+			color: #ff527d;
+			.xiazai{
+				font-size: 14px;
+				padding: 0;
+			}
+			.xiazai:hover{color: #ff527d;}
+		}
+	}
+}
