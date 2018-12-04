@@ -1,9 +1,25 @@
 import React,{Component} from 'react';
 import css from './index.module.scss';
 import {NavLink} from 'react-router-dom';
+import imgurl from '../../logo.png';
+import {withRouter} from 'react-router-dom';
+import axios from 'axios';
 
 class Header extends Component{
+	constructor(props){
+		super(props);
+
+		this.state = {
+			text:''
+		}
+	}
+
+	componentDidMount(){
+		// console.log(this.props)
+	}
+
 	render(){
+		var value = this.state.value;
 		return <div>
 		  <div className='container-fluid xhead'>
 		    <div className='container'>
@@ -20,10 +36,39 @@ class Header extends Component{
 		    </div>
 		    </div>
 		  </div>
-		  <div className='container'>
-		  	
+		  <div className='container xhead_down clear'>
+		  	<main>
+		  		<NavLink to='/home' className='l mainleft clear'>
+		  			<div className='ximg clear'>
+			  			<img src={imgurl} className='l'/>
+			  			<h1 className='l'>花卷</h1>
+		  			</div>
+		  			<p>红人视频购物商城</p>
+		  		</NavLink>
+		  		<div className='mainright r clear'>
+		  			<form className="l">
+		  				<input type="text" ref="textInput" placeholder="请输入想找的红人或商品" onChange={this.inputClick.bind(this)}/>
+		  				<button type="submit" ><i className="iconfont icon-sousuo"></i></button>
+		  			</form>
+		  			<NavLink to='/cart' className={css.cart}>
+		  				<i className='iconfont icon-buy-car l'/>
+		  				<p className='l'>我的购物车</p>
+		  			</NavLink>
+		  		</div>
+		  	</main>
 		  </div>
 		</div>
+	}
+
+	inputClick(){
+		var word = this.refs.textInput.value;
+
+		// console.log(this.props.myvalue)
+		this.setState({
+			text: word
+		})
+
+		this.props.history.push(`/search/result?value=${this.state.text}`)
 	}
 }
 

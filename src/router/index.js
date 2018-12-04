@@ -15,7 +15,6 @@ import Order from '../components/Order'
 	import GoodsSendList from '../components/Order/GoodsSendList'
 
 import Search from '../components/Search'
-	import Result from '../components/Search/Result'
 
 import Cart from '../components/Cart'
 	import Step2 from '../components/Cart/Step2'
@@ -62,14 +61,7 @@ const router =(
 				</Order>
 			}/>
 
-			<Route path="/search" render={()=>
-				<Search>
-					<Switch>
-						<Route path="/search/result" component={Result}/>
-						<Redirect from="/search" to="/search/result"/>
-					</Switch>
-				</Search>
-			}/>
+			<Route path="/search/result?value=:value" component={Search}/>
 
 			<Route path="/cart" render={()=>
 				<Cart>

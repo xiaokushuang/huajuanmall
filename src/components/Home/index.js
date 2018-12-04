@@ -4,6 +4,7 @@ import Centerbar from "../../components/Centerbar";
 class Home extends Component {
 	render () {
 		return <div>
+
 		<Centerbar my = {this.props.history}></Centerbar>
 			Home
 		</div>
