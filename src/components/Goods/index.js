@@ -7,6 +7,7 @@ class Goods extends Component {
 			{this.props.children}
 		</div>
 	}
+	
 }
 
 export default Goods
