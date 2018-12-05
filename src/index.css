@@ -6,7 +6,6 @@ img {display: block;}
 .l {float: left;}
 .r {float: right;}
 .clear::after {display: block;content: "";clear: both;}
-.active {background: yellowgreen;}
 .hide {display: none;}
 
 /*body {

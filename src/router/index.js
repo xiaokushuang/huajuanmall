@@ -35,74 +35,89 @@ import Service from '../components/Service'
 import store from "../store"
 import {Provider} from "react-redux";
 
-const router =(
+const router = (
 <Provider store={store}>
- <Router>
-	<App>
-		<Switch>
-			<Route path="/login" component={Login}/>
-			<Route path="/home" component={Home}/>
+	<Router>
+		<App>
+			<Switch>
+				<Route path="/login" component={Login}/>
+				<Route path="/home" component={Home}/>
 
-			{/*<Route path="/user" component={User}/>*/}
+				{/*<Route path="/user" component={User}/>*/}
 
-			<Route path="/user" render={()=>
-				<User>
-					<Route path="/user/follow" component={Follow}/>
-					<Route path="/user/coupon" component={Coupon}/>
-					<Route path="/user/addAddressView" component={AddAddressView}/>
-				</User>
-			}/>
+				<Route path="/user" render={()=>
+					<User>
+						<Switch>
+							<Route path="/user/follow" component={Follow}/>
+							<Route path="/user/coupon" component={Coupon}/>
+							<Route path="/user/addAddressView" component={AddAddressView}/>
+						</Switch>
+					</User>
+				}/>
 
-			<Route path="/order" render={()=>
-				<Order>
-					<Route path="/order/nopayList" component={NopayList}/>
-					<Route path="/order/payList" component={PayList}/>
-					<Route path="/order/goodsSendList" component={GoodsSendList}/>
-				</Order>
-			}/>
+				<Route path="/order" render={()=>
+					<Order>
+						<Switch>
+							<Route path="/order/nopayList" component={NopayList}/>
+							<Route path="/order/payList" component={PayList}/>
+							<Route path="/order/goodsSendList" component={GoodsSendList}/>
+						</Switch>
+					</Order>
+				}/>
 
-			<Route path="/search/result?value=:value" component={Search}/>
+				<Route path="/search/result?value=:value" component={Search}/>
 
-			<Route path="/cart" render={()=>
-				<Cart>
-					<Route path="/cart/step2" component={Step2}/>
-					<Route path="/cart/coulist" component={Coulist}/>
-				</Cart>
-			}/>
+				{/*<Route path="/search" render={()=>
+					<Search>
+						<Switch>
+							<Route path="/search/result" component={Result}/>
+							<Redirect from="/search" to="/search/result"/>
+						</Switch>
+					</Search>
+				}/>*/}
 
-			<Route path="/category" component={Category}/>
-			<Route path="/chargeTutoria" component={ChargeTutoria}/>
-			<Route path="/hongren" component={Hongren}/>
-			{/*<Route path="/hongren/:id" render={()=>	
-			// 	<Hongren>
-			// 		<Switch>
-			// 			<Route path="/hongren/list" component={HongrenList}/>
-			// 		</Switch>
-			// 	</Hongren>
-			// }/>*/}
+				<Route path="/cart" render={()=>
+					<Cart>
+						<Switch>
+							<Route path="/cart/step2" component={Step2}/>
+							<Route path="/cart/coulist" component={Coulist}/>
+						</Switch>
+					</Cart>
+				}/>
 
-			<Route path="/goods" render={()=>
-				<Goods>
-					<Switch>
-						<Route path="/goods/detail" component={GoodsDetail}/>
-						<Redirect from="/goods" to="/goods/detail"/>
-					</Switch>
-				</Goods>
-			}/>
+				<Route path="/category" component={Category}/>
+				<Route path="/chargeTutoria" component={ChargeTutoria}/>
+				<Route path="/hongren" component={Hongren}/>
+				{/*<Route path="/hongren/:id" render={()=>	
+				// 	<Hongren>
+				// 		<Switch>
+				// 			<Route path="/hongren/list" component={HongrenList}/>
+				// 		</Switch>
+				// 	</Hongren>
+				// }/>*/}
 
-			<Route path="/video" render={()=>
-				<Video>
-					<Switch>
-						<Route path="/video/detail" component={VideoDetail}/>
-						<Redirect from="/video" to="/video/detail"/>
-					</Switch>
-				</Video>
-			}/>
+				<Route path="/goods" render={()=>
+					<Goods>
+						<Switch>
+							<Route path="/goods/detail" component={GoodsDetail}/>
+							<Redirect from="/goods" to="/goods/detail"/>
+						</Switch>
+					</Goods>
+				}/>
 
-			<Route path="/service" component={Service}/>
-			<Redirect from="/" to="/home"/>
-		</Switch>
-	</App>
-</Router>
+				<Route path="/video" render={()=>
+					<Video>
+						<Switch>
+							<Route path="/video/detail" component={VideoDetail}/>
+							<Redirect from="/video" to="/video/detail"/>
+						</Switch>
+					</Video>
+				}/>
+
+				<Route path="/service" component={Service}/>
+				<Redirect from="/" to="/home"/>
+			</Switch>
+		</App>
+	</Router>
 </Provider>)
 export default router

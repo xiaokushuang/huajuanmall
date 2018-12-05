@@ -1,0 +1,165 @@
+.user {
+	width: 1200px; margin: 0 auto; padding: 15px 0 0 0;
+	.userHead {
+		font-size: 12px; color: #999;
+	}
+	.userInfoBox {
+		margin-top: 15px; padding: 35px 0 35px 0;background: #fff;  box-shadow: 0 0 4px rgba(0,0,0,.3); border-radius: 10px;
+    .userInfo {
+			width: 310px; min-height: 170px; border-right: 1px solid #eee; display: flex; justify-content: center;
+			float: left;
+			.userInfoCenter {
+				text-align: center; box-sizing: border-box; color: rgba(0,0,0,.65);
+				img {
+					vertical-align: middle; border-style: none; width: 100px; height: 100px;border-radius: 100%;
+				}
+				.userName {
+	    		font-size: 18px; color: #333; font-weight: 700; margin-top: 15px;
+				}
+				.userAge {
+			    font-size: 12px; color: #666; text-align: center;
+				}
+			}
+    }
+    .relevant {
+			width: 380px; min-height: 170px; float: left; border-right: 1px solid #eee; font-size: 14px;
+    	line-height: 1.5; color: rgba(0,0,0,.65);
+    	.relevantList {
+    		margin-top: 10px; width: 126px; display: inline-block; text-align: center; justify-content: center;
+    		align-items: center;
+    		span {
+    			font-size: 28px; position: relative;
+    		}
+    		div {
+    			margin-top: -5px;
+    		}
+    	}
+    }
+    .address {
+			width: 450px; height: 180px; float: left; background: #fff url("/img/shalong.png") no-repeat 0;
+    	background-size: 8px auto; border: 1px solid #eee; margin-left: 30px; border-radius: 10px;
+    	margin-top: -4px;
+    	.addressPlane {
+    		width: 72px; height: 100%; background: url("/img/paperplane.png") no-repeat 50%;
+    		background-size: 100% auto; margin-left: 35px; float: left;
+    	}
+    	.addressInfo {
+    		float: left; width: 270px; display: flex; height: 100%; margin-left: 30px; align-items: center;
+    		.notHasAddress {
+    			color: #999; font-size: 16px;
+    			a {
+    				width: 90px; height: 20px; border: 1px solid #ff527d; font-size: 12px; text-align: center;
+   		 			line-height: 18px; color: #ff527d; display: inline-block; border-radius: 20px; margin-left: 20px;
+    			}
+    		}
+    	}
+    }
+	}
+	.myOrder {
+		margin-top: 30px;
+		.huajuanTitle {
+			font-size: 20px; color: #333; font-weight: 300; 
+		}
+		.orderListBox {
+			border: 1px solid #eee; padding: 30px; border-radius: 10px; margin-top: 18px;
+			.notOrderInfo {
+				color: #999; font-size: 16px; text-align: center;
+				a {
+					width: 80px; height: 20px; border: 1px solid #ff527d; font-size: 12px; text-align: center;
+  				line-height: 18px; color: #ff527d; display: inline-block; border-radius: 20px; margin-top: 5px;
+				}
+			}
+		}
+	}
+	.myLike {
+		margin-top: 30px;
+		.huajuanTitle {
+			font-size: 20px; color: #333; font-weight: 300;
+		}
+		.myLikeContent {
+			border: 1px solid #eee; padding: 28px 20px; border-radius: 10px; margin-top: 18px;
+			div {
+				.huajuanTitle {
+					font-size: 20px; color: #333; font-weight: 300;
+					.smallTitle {
+						font-size: 18px;
+					}
+				}
+				.noInfo {
+					color: #999; font-size: 16px; text-align: center; width: 100%; padding: 20px 0;
+					a {
+						width: 80px; border: 1px solid #ff527d; font-size: 12px; text-align: center;
+						line-height: 18px; color: #ff527d; border-radius: 20px; margin-top: 5px; display: inline-block;
+					}
+				}
+			}
+			div {
+				.myLikeGoods {
+					padding-top: 24px; border-top: 1px solid #eee; margin-top: 28px;
+					.huajuanTitle {
+						font-size: 20px; color: #333; font-weight: 300;
+						.smallTitle {
+							font-size: 18px;
+						}
+					}
+					.noInfo {
+						color: #999; font-size: 16px; text-align: center; width: 100%; padding: 20px 0;
+						a {
+							width: 80px; border: 1px solid #ff527d; font-size: 12px; text-align: center;
+							line-height: 18px; color: #ff527d; border-radius: 20px; margin-top: 5px; display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.myHotRec {
+		margin-top: 30px;
+		.huajuanTitle {
+			font-size: 20px; color: #333; font-weight: 300;
+		}
+		div {
+			.hotRecGoods {
+				margin-top: 15px;
+				.hotRecGoodsList:hover {
+					.originalImage {
+						transform: scale(1.1);
+					}
+				}
+				.hotRecGoodsList {
+					width: 224px; float: left; margin: 0 20px 20px 0;
+					.goodsItem {
+						width: 100%; height: 100%; border: 1px solid #eee; border-radius: 10px; padding: 10px; cursor: pointer; overflow: hidden;
+						a {
+							.goodsImageBox {
+								position: relative; overflow: hidden;
+								.originalImage {
+									width: 100%; transition: transform .3s; vertical-align: middle; border-style: none;
+								}
+							}
+							.goodsDesc {
+								font-size: 14px; color: #333; transition: color .3s; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+							}
+							.goodsName {
+								margin: 5px 0 0; font-size: 14px; color: #333; transition: color .3s; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+							}
+							.goodsPriceBox {
+								margin: 8px 0 0;
+								.goodsPrice {
+									font-size: 20px; color: #ff527d; font-weight: 600;
+									b {
+										font-weight: 500; font-size: 16px;
+									}
+								}
+								.goodsMarketparice {
+									font-size: 14px; color: #ccc; text-decoration: line-through; font-weight: 100;
+  								margin-left: 10px
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
