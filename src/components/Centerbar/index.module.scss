@@ -1,8 +1,10 @@
 .navlist{
 	height:60px;
+	width:100%;
+	display:flex;
 	.parli{
 		float: left;
-		width: 126px;
+		flex:1;
 		height:100%;
 		text-align: center;
 		line-height: 60px;
@@ -11,6 +13,24 @@
 		color: #333;
 		line-height: 60px;
 		font-size:14px;
+		img{
+			display:inline-block;
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+	}
+	.active{
+		float: left;
+		flex:1;
+		height:100%;
+		text-align: center;
+		line-height: 60px;
+		position: relative;
+		cursor: pointer;
+		color: #333;
+		line-height: 60px;
+		font-size:14px;
+		border-bottom: 3px solid #ff527d;
 		img{
 			display:inline-block;
 			margin-right: 10px;

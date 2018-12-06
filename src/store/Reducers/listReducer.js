@@ -2,7 +2,7 @@ const listReducer = (prevState=[],action={})=>{
 	let {type,payload} = action;
 	switch(type){
 		case "huajuanCenter":
-		return [...prevState,...payload];
+		return payload;
 		default:
 		return prevState
 	}

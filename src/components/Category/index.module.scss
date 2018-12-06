@@ -1,0 +1,100 @@
+.list{
+	width:100%;
+	height:50px;
+	border:1px solid #eee;
+}
+.class{
+		display: inline-block;
+		height:50px;
+		line-height: 50px;
+		text-align: center;
+		margin-right: 10px;
+		float: left;
+		margin-left: 20px;
+
+	}
+	.everyList{
+		height:50px;
+		display: inline-block;
+		overflow: hidden;
+		li{
+			float: left;
+			height:100%;
+			text-align: center;
+			width:83px;
+			cursor: pointer;
+			span{
+				border-right: 1px solid #ccc;
+				display: inline-block;
+				width:100%;
+				margin-top: 16px;
+				color:#999;
+				font-size: 12px;
+			}
+		}
+		span:hover{
+			color: #ff527d;
+		}
+	}
+.proList{
+	overflow: hidden;
+	width:100%;
+	li{
+		float: left;
+		width:224px;
+		height:319px;
+		border: 1px solid #eee;
+		margin-right: 20px;
+		margin-top: 20px;
+		div{
+			margin:10px;
+			overflow: hidden;
+		}
+		a{
+		width:202px;
+		img{
+			width:202px;
+			height:202px;
+			}
+			h3{
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			h3,p{
+				color:#333;
+				font-size: 14px;
+				margin-top: 8px;
+			}
+			h2{
+				display: inline-block;
+				color: #ff527d;
+				font-size: 20px;
+				margin-top: 8px;
+			}
+			span{
+				text-decoration: line-through;
+				margin-top: 8px;
+				margin-left: 10px;
+			}
+		}
+	}
+	li:hover img{
+		transform:scale(1.1);
+		transition :.5s;
+	}
+	li:nth-of-type(5n){
+		margin-right: 0px;
+	}
+}
+.active{
+	color:#ff527d;
+}
+.example {
+  text-align: center;
+  background: rgba(0,0,0,0.05);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 50px;
+  margin: 20px 0;
+}
