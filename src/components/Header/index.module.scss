@@ -11,6 +11,7 @@
 	}
 	:global(.headright){
 		line-height: 30px;
+		margin-right: 30px;
 		p{
 			color: #ff527d;
 		}
@@ -31,4 +32,88 @@
 			.xiazai:hover{color: #ff527d;}
 		}
 	}
+}
+
+:global(.xhead_down){
+	box-sizing:border-box;
+	height: 120px;
+	main{
+		padding: 20px;
+		height: 100%;
+		:global(.mainleft){
+			height: 120px;
+			:global(.ximg){
+				img{
+					margin-top: 3px;
+				}
+				h1{
+					color:#ff527d;
+					font-size: 24px;
+					margin-left: 5px;
+					line-height: 46px;
+				}
+			}
+			p{
+				color: #999;
+				font-size: 12px;
+				margin-top: 10px;
+				margin-left: 5px;
+			}
+		}
+		:global(.mainright){
+			padding-top: 15px;
+			form{
+				width: 388px;
+			    height: 40px;
+			    padding: 0 20px;
+			    border-radius: 20px;
+			    color: #333;
+			    background: #eee;
+			    position: relative;
+			   
+			    input{
+			    	border: none;
+			    	outline: none;
+			    	background: #eee;
+			    	line-height: 40px;
+			    }
+			    button{
+			    	position: absolute;
+			    	top: 50%;
+			    	right: 16px;
+			    	-webkit-transform: translateY(-50%);
+			    	-ms-transform: translateY(-50%);
+			    	transform: translateY(-50%);
+			    	font-size: 20px;
+			    	color: #999;
+		    	    border: none;
+		    	    background: transparent;
+		    	    outline: none;
+		    	    cursor: pointer;
+			    }
+			    button:hover{color: #ff527d;}
+			}
+			.cart{
+				width: 158px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid #eee;
+				float: left;
+				margin-left: 30px;
+				padding-left: 25px;
+				color: #333;
+				transition: color .3s,border .3s;
+				i{
+					color: #ff527d;
+					font-size: 22px;
+					margin-right: 5px;
+				}
+			}
+			.cart:hover{
+				color: #ff527d;
+				border-color: #ff527d;
+			}
+		}
+	}
+	
 }

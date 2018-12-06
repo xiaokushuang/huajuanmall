@@ -17,4 +17,12 @@ img {display: block;}
   margin: 0 auto;
 }
 
+b, i {font-style: normal;}
+
+.go2top { font-size: 14px; line-height: 1.5; color: rgba(0,0,0,.65); box-sizing: border-box; margin: 0; padding: 0; list-style: none;
+    z-index: 10; position: fixed; right: 100px; bottom: 50px; height: 40px; width: 40px; cursor: pointer;}
+.go2topContent { transition: all .3s cubic-bezier(.645,.045,.355,1);
+    height: 40px; width: 40px; border-radius: 20px; background-color: rgba(0,0,0,.45); color: #fff; text-align: center; overflow: hidden;
+}
+.go2topIcon {margin: 12px auto; width: 14px; height: 16px; background: url('/img/go2top.png') 100%/100% no-repeat;}
 
