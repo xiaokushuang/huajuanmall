@@ -1,0 +1,89 @@
+.hongRen{
+	ul{
+		li{
+			width: 283px;
+			height: 326px;
+			float: left;
+			margin-right: 20px;
+			border-radius: 10px;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			.count{
+				position: relative;
+				padding: 2px 5px;
+				top: -30px;
+				z-index: 10;
+				color: #ff527d;
+				background: white;
+				border-radius: 10px;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+.goods{
+	width: 100%;
+	ul{
+		width: 100%;
+		li{
+			margin-right: 20px;
+			margin-bottom: 20px;
+			border: 1px solid #eee;
+			border-radius: 10px;
+			padding: 10px;
+			float: left;
+			width: 224px;
+			height: 319px;
+			.img{
+				overflow: hidden;
+				img{
+					width: 200px;
+					transition: .4s;
+					height: 200px;
+				}
+				img:hover{
+					transform: scale(1.2)
+				}
+			}
+			
+			.desc{
+				font-weight: bold;
+				margin-top: 10px;
+			}
+			.name{
+				margin-top: 5px;
+				overflow: hidden;
+				// 显示省略号
+				text-overflow: ellipsis;
+				// 不换行
+				white-space: nowrap;
+			}
+			.price{
+				line-height: 50px;
+				i{
+					color: #ff527d;
+					font-size: 20px;
+					font-style: normal;
+					font-weight: bold;
+				}
+				del{
+					font-style: normal;
+					margin-left: 5px;
+					color: #ccc;
+				}
+			}
+		}
+		li:nth-of-type(5n){
+			margin-right: 0;
+		}
+	}
+	
+}
+h3{
+	font-size: 26px;
+	height: 35px;
+	width: 100%;
+}

@@ -17,6 +17,7 @@ class Home extends Component {
 		</Centerbar>
 			Home
 		</div>
+	}
 
 	constructor(props){
 		super(props);

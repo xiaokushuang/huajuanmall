@@ -94,7 +94,7 @@
 			    button:hover{color: #ff527d;}
 			}
 			.cart{
-				width: 158px;
+				width: 140px;
 				height: 40px;
 				line-height: 40px;
 				border: 1px solid #eee;
@@ -106,7 +106,7 @@
 				i{
 					color: #ff527d;
 					font-size: 22px;
-					margin-right: 5px;
+					margin: 0 5px 0 10px;
 				}
 			}
 			.cart:hover{
@@ -114,6 +114,10 @@
 				border-color: #ff527d;
 			}
 		}
-	}
-	
+	}	
+}
+
+:global(.xfooter){
+	height: 2px;
+	background: #ff527d;
 }
