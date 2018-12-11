@@ -6,7 +6,6 @@ import "swiper/dist/css/swiper.css";
 import Centerbar from "../../components/Centerbar";
 import axios from "axios";
 class Home extends Component {
-
 	constructor(props){
 		super(props);
 		this.state={

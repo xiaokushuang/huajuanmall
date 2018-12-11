@@ -6,5 +6,11 @@ module.exports = function (app){
 		host:'www.huajuanmall.com',
 		changeOrigin:true
 	}));
+
+	app.use(proxy('/search',{
+		target:'https://www.huajuanmall.com',
+		host:'www.huajuanmall.com',
+		changeOrigin:true
+	}));
 }
 //https://www.huajuanmall.com/pc/pcIndex/class
