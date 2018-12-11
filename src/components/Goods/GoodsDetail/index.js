@@ -6,6 +6,9 @@ class GoodsDetail extends Component {
 			GoodsDetail
 		</div>
 	}
+	componentDidMount(){
+		console.log(this.props)
+	}
 }
 
 export default GoodsDetail

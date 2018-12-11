@@ -7,17 +7,6 @@ import Centerbar from "../../components/Centerbar";
 import axios from "axios";
 class Home extends Component {
 
-	render () {
-		return <div>
-		<Centerbar my = {this.props.history} myevent={(data,list)=>{}}	 event={(data)=>{}
-		}>
-			{
-				console.log(this.props)
-			}
-		</Centerbar>
-			Home
-		</div>
-
 	constructor(props){
 		super(props);
 		this.state={
@@ -32,7 +21,8 @@ class Home extends Component {
 	render(){
 
 		return <div className="container">
-			<Centerbar my={this.props.history}></Centerbar>
+			<Centerbar my={this.props.history} myevent={(data,list)=>{}}	 event={(data)=>{}
+		}></Centerbar>
 		{/*上*/}
 		{this.state.hotlist?
 			<div className={css.main}>

@@ -12,9 +12,9 @@ class Category extends Component {
 		this.state={
 			navbarlist:[],
 			message:'加载中',
-			mid:'',
 			current:0,
-			goodscount:0
+			goodscount:0,
+			mid:''
 		}
 	}
 
@@ -27,10 +27,8 @@ class Category extends Component {
 					}).children
 				})
 			}
-			} event={(data)=>{
-				this.setState({
-					mid:data
-				})
+			} event={(mid)=>{
+				console.log(mid)
 			}}></Centerbar>
 			<div className="container">
 				<div className={css.list}>
@@ -38,7 +36,7 @@ class Category extends Component {
 					{
 						this.state.navbarlist.length>0?
 						<ul className={css.everyList}>
-							 <li><span>全部</span></li>
+							 <li onClick={this.allClick.bind(this)}><span>全部</span></li>
 							{
 								this.state.navbarlist.map((item,index)=>
 									<li key={item.gc_id} className={this.state.current==index?css.active:''} onClick={this.handle.bind(this,item.gc_id,index)}><span>{item.gc_name}</span></li>
@@ -48,19 +46,17 @@ class Category extends Component {
 					}
 				</div>
 				{
-					this.props.categorylist.goods_info?
+					this.props.categorylist?
 					<ul className={css.proList}>
 					{
-						this.props.categorylist.goods_info.map((item)=>
+						this.props.categorylist.map((item)=>
 							<li key={item.goods_id}>
-								<div>
-									<NavLink to="/detail/:id">
-										<img src={item.goods_image}/>
-										<h3 className={css.desc}>{item.goods_desc}</h3>
-										<p className={css.name}>{item.goods_name}</p>
-										<h2 className={css.price}>￥:{item.goods_price}</h2>
-										<span className={css.maretPrice}>{item.goods_marketprice}</span>
-									</NavLink>
+								<div onClick={this.handleClick.bind(this,item.goods_id)}>
+									<img src={item.goods_image}/>
+									<h3 className={css.desc}>{item.goods_desc}</h3>
+									<p className={css.name}>{item.goods_name}</p>
+									<h2 className={css.price}>￥:{item.goods_price}</h2>
+									<span className={css.maretPrice}>{item.goods_marketprice}</span>
 								</div>
 							</li>
 							)
@@ -72,25 +68,24 @@ class Category extends Component {
 		</div>
 	}
 	componentDidMount(){
-		var vid ='/categroy/9'.slice(10)
-		if(this.props.categorylist.length == 0){
-			this.props.getCategoryListPromise(vid,this.state.current);
-		}else{	
-			this.props.categorylist.length = 0
-		}
-
 		window.onscroll=()=>{
-			if(this.props.categorylist.allCount>=this.state.current){
+			if(this.props.allCount>=this.state.current){	
 				if((window.innerHeight+document.documentElement.scrollTop)>=document.documentElement.scrollHeight){
 				this.setState({
 					current:this.state.current+15
 				})
-			}
+				}
 			}
 		}
+		
+	}
+	componentWillReceiveProps(){
+		this.setState({
+			mid:this.props.location.pathname
+		})
 	}
 
-	componentDidUpdate(){
+	allClick(){
 		var vid =this.state.mid.slice(10)
 		if(this.props.categorylist.length == 0){
 			this.props.getCategoryListPromise(vid,this.state.current);
@@ -98,19 +93,38 @@ class Category extends Component {
 			this.props.categorylist.length = 0
 		}
 	}
+	handleClick(id){
+		this.props.history.push('/goods/detail' + id)
 
+	}
+	componentDidUpdate(){
+		console.log(this.props.allCount)
+		// localStorage.id = this.props.location.pathname
+		var vid =this.props.location.pathname.slice(10)
+		if(this.props.categorylist.length == 0){
+			this.props.getCategoryListPromise(vid,this.state.current);
+		}else{	
+			this.props.categorylist.length = 0
+			// this.props.getCategoryListPromise1(vid,this.state.current);
+		}
+		
+	}
 	handle(id,index){
+		
 		this.props.history.push("/category/" + id)
 		if(this.props.categorylist.length == 0){
 			this.props.getCategoryListPromise(id,this.state.current);
+			this.props.getCategoryListPromise2(id);
 		}else{	
 			this.props.categorylist.length = 0
 		}
 	}
+	
 }
 
 export default connect((state)=>{
 	return { 
-		categorylist:state.categoryReducer
+		categorylist:state.categoryReducer,
+		allCount:state.numReducer
 	}
 },action)(Category);

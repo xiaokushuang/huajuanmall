@@ -59,15 +59,16 @@ class Centerbar extends Component{
 		this.setState({
 			num :index
 		})
+		console.log(this.props)
+		this.props.event(this.props);
 		this.props.my.push('/category/' + id)
 		this.props.myevent(id,this.props.datalist)
-		this.props.event(this.props.my.location.pathname)
 	}
 	handleClick(e,data){
+		console.log(this.props)
 		e.stopPropagation();
 		e.nativeEvent.stopImmediatePropagation()
 		this.props.my.push('/category/' + data)
-		this.props.event(this.props.my.location.pathname)
 	}
 	componentWillMount(){                                    
 		if(this.props.datalist.length == 0){

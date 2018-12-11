@@ -7,6 +7,9 @@ class Goods extends Component {
 			{this.props.children}
 		</div>
 	}
+	componentDidMount(){
+		console.log(this.props)
+	}
 	
 }
 

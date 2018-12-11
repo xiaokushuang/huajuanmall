@@ -99,7 +99,7 @@ const router = (
 				<Route path="/goods" render={()=>
 					<Goods>
 						<Switch>
-							<Route path="/goods/detail" component={GoodsDetail}/>
+							<Route path="/goods/detail:id" component={GoodsDetail}/>
 							<Redirect from="/goods" to="/goods/detail"/>
 						</Switch>
 					</Goods>
